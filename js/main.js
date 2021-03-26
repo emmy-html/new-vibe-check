@@ -153,7 +153,7 @@ function updateTime() {
     default:
       todayHour = "404";
   }
-  // force minutes to always display as double
+  // force minutes to always display as double digits
   if (todayMins < 10) {
     todayMins = "0" + todayMins;
   } else {
@@ -295,8 +295,66 @@ let songs = [
     vibe: "midnight",
   },
 ];
+/* vibe checker (color scheme/moodboard switcher), nested function so the color scheme switcher can be referenced from the shuffle song
+   function and the dropdown selection menu   */
+function vibeChecker() {
+  function updateSelection() {
+    const vibeSelect = document.getElementById("vibe-selection");
+    const selected = vibeSelect.value;
+    // function to update class names so it'll apply the new color scheme to a clean body
+    function updateClass(selected) {
+      document.body.className = "";
+      document.body.classList.add(selected);
+      // function to filter through songs and return the appropriate data for each color scheme
+      let foundSong = songs.find((song) => song.vibe === selected);
+      // set song data
+      songName.innerHTML = foundSong.name;
+      songArtist.innerHTML = foundSong.artist;
+      songAlbum.innerHTML = foundSong.album;
+      songLength.innerHTML = foundSong.length;
+      songAlbumArt.style.backgroundImage = foundSong.albumArt;
+      // set audio source
+      audioElement.src = foundSong.source;
+    }
+    // call the update class function on each selection
+    switch (selected) {
+      case "early-riser":
+        updateClass(selected);
+        break;
+      case "sunday-afternoon":
+        updateClass(selected);
+        break;
+      case "wednesday-evening":
+        updateClass(selected);
+        break;
+      case "noon":
+        updateClass(selected);
+        break;
+      case "late-night-drive":
+        updateClass(selected);
+        break;
+      case "friday-morning":
+        updateClass(selected);
+        break;
+      case "nightclub":
+        updateClass(selected);
+        break;
+      case "dinner-with-her":
+        updateClass(selected);
+        break;
+      case "midnight":
+        updateClass(selected);
+        break;
+      default:
+        document.body.className = "";
+        document.body.classList.add("early-riser");
+    }
+  }
+  updateSelection();
+}
 // shuffle song function
 function shuffleSongs() {
+  const vibeSelect = document.getElementById("vibe-selection");
   // select random song
   var shuffled = songs[Math.floor(Math.random() * songs.length)];
   // check to make sure song shuffled is not the song playing, if so, skip it
@@ -312,56 +370,8 @@ function shuffleSongs() {
   songAlbumArt.style.backgroundImage = shuffled.albumArt;
   // set audio source
   audioElement.src = shuffled.source;
-}
-function vibeChecker() {
-  // vibe checker (color scheme/moodboard switcher)
-  const vibeSelect = document.getElementById("vibe-selection");
-  const selected = vibeSelect.value;
-  // function to update class names so it'll apply the new color scheme to a clean body
-  function updateClass(selected) {
-    document.body.className = "";
-    document.body.classList.add(selected);
-    // function to filter through songs and return the appropriate data for each color scheme
-    let foundSong = songs.find(song => song.vibe === selected);
-    // set song data
-    songName.innerHTML = foundSong.name;
-    songArtist.innerHTML = foundSong.artist;
-    songAlbum.innerHTML = foundSong.album;
-    songLength.innerHTML = foundSong.length;
-    songAlbumArt.style.backgroundImage = foundSong.albumArt;
-    // set audio source
-    audioElement.src = foundSong.source;
-  }
-  switch (selected) {
-    case "early-riser":
-      updateClass(selected);
-      break;
-    case "sunday-afternoon":
-      updateClass(selected);
-      break;
-    case "wednesday-evening":
-      updateClass(selected);
-      break;
-    case "noon":
-      updateClass(selected);
-      break;
-    case "late-night-drive":
-      updateClass(selected);
-      break;
-    case "friday-morning":
-      updateClass(selected);
-      break;
-    case "nightclub":
-      updateClass(selected);
-      break;
-    case "dinner-with-her":
-      updateClass(selected);
-      break;
-    case "midnight":
-      updateClass(selected);
-      break;
-    default:
-      document.body.className = "";
-      document.body.classList.add("early-riser");
-  }
+  // update the dropdown selection on shuffle
+  vibeSelect.value = shuffled.vibe;
+  // run color scheme switcher
+  vibeChecker();
 }
