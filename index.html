@@ -7,16 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" href="https://emmy-html.github.io/the-new-vibe-check/css/normalize.css" />
-    <link rel="stylesheet" href="https://emmy-html.github.io/the-new-vibe-check/css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <meta name="theme-color" content="#fafafa" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="early-riser">
+    <section id="moodboard">
+      <article id="moodboard-img-one">
+        &nbsp;
+      </article>
+    </section>
     <header>
       <h1 class="project-title">Vibe Check</h1>
+      <!-- change song data & color scheme based on selection -->
+      <select name="vibes" id="vibe-selection" onchange="vibeChecker()">
+        <option value="early-riser">Early Riser</option>
+        <option value="sunday-afternoon">Sunday Afternoon</option>
+        <option value="wednesday-evening">Wednesday Evening</option>
+        <option value="noon">Noon</option>
+        <option value="late-night-drive">Late Night Drive</option>
+        <option value="friday-morning">Friday Morning</option>
+        <option value="nightclub">Nightclub</option>
+        <option value="dinner-with-her">Dinner With Her</option>
+        <option value="midnight">Midnight</option>
+      </select>
     </header>
     <main>
       <!-- Ipod Shell (Dark Purple shadow)-->
@@ -73,7 +90,7 @@
       Disclaimer:
       Please view on screen of at least 768px. Thank you!
     </footeR>
-    <script src="https://emmy-html.github.io/the-new-vibe-check/js/plugins.js"></script>
-    <script src="https://emmy-html.github.io/the-new-vibe-check/js/main.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

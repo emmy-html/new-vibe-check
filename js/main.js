@@ -1,8 +1,10 @@
-// check width to choose if content will display
+// check width to choose if content will display, if screen is too small, user will be alerted. thanks brittney for this idea! ^_^
 function checkWidth() {
   const w = window.innerWidth;
   if (w < 768) {
-    alert("Please view on a screen size that is at least 768px wide! Thank you!");
+    alert(
+      "Please view on a screen size that is at least 768px wide! Thank you!"
+    );
   } else {
     console.log("Success!");
   }
@@ -75,7 +77,7 @@ function updateTime() {
     timeIndicatorSymbol = "&#9728;";
   }
   // convert hours from military time into US standard time
-  switch(todayHour) {
+  switch (todayHour) {
     case 0:
       todayHour = "12";
       break;
@@ -90,25 +92,25 @@ function updateTime() {
       break;
     case 4:
       todayHour = "04";
-      break;    
+      break;
     case 5:
       todayHour = "05";
-      break; 
+      break;
     case 6:
       todayHour = "06";
       break;
     case 7:
       todayHour = "07";
-      break; 
+      break;
     case 8:
       todayHour = "08";
-      break; 
+      break;
     case 9:
       todayHour = "09";
-      break; 
+      break;
     case 10:
       todayHour = "10";
-      break; 
+      break;
     case 11:
       todayHour = "11";
       break;
@@ -144,7 +146,7 @@ function updateTime() {
       break;
     case 22:
       todayHour = "10";
-      break; 
+      break;
     case 23:
       todayHour = "11";
       break;
@@ -176,12 +178,17 @@ function updateTime() {
 setInterval(updateTime);
 // audio element container
 const audioElement = document.getElementById("song-container");
+// access song data on the page
+const songName = document.getElementById("song-name");
+const songArtist = document.getElementById("song-artist");
+const songAlbum = document.getElementById("song-album");
+const songLength = document.getElementById("song-length");
+const songAlbumArt = document.getElementById("album-art");
 // counter to count how many times button has been pressed
 var counter = 0;
 // audio player
 function playSong() {
   const playButton = document.getElementById("play");
-  var paused = audioElement.isPaused;
   // define audio element
   audioElement.play();
   // alternate between pause & play depending on if the song is playing or not
@@ -210,9 +217,10 @@ let songs = [
     album: "When I Get Home",
     length: "1:51",
     source: "https://emmy-html.github.io/the-new-vibe-check/songs/binz.mp3",
-    albumArt: "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-solange.png')",
+    albumArt:
+      "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-solange.png')",
     vibe: "early-riser",
-  }, /*
+  } /*
   {
     name: "Distance",
     artist: "Yebba",
@@ -229,7 +237,7 @@ let songs = [
     length: "2:53",
     source: "https://emmy-html.github.io/the-new-vibe-check/songs/touch_me.mp3",
     albumArt: "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-orion-sun.png')",
-    vibe: "wednesday-evening-coffee",
+    vibe: "wednesday-evening",
   },
   {
     name: "Drive and Disconnect",
@@ -275,25 +283,20 @@ let songs = [
     source: "https://emmy-html.github.io/the-new-vibe-check/songs/headaches.mp3",
     albumArt: "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-headaches.png')",
     vibe: "dinner-with-her",
-  }, */
+  }, */,
   {
     name: "Touch Me",
     artist: "Victoria Monét <br> ft. Kehlani",
     album: "Jaguar",
     length: "3:11",
     source: "https://emmy-html.github.io/the-new-vibe-check/songs/touch_me.mp3",
-    albumArt: "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-jaguar.png')",
+    albumArt:
+      "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-jaguar.png')",
     vibe: "midnight",
-  }
+  },
 ];
 // shuffle song function
 function shuffleSongs() {
-  // access song data on the page
-  const songName = document.getElementById("song-name");
-  const songArtist = document.getElementById("song-artist");
-  const songAlbum = document.getElementById("song-album");
-  const songLength = document.getElementById("song-length");
-  const songAlbumArt = document.getElementById("album-art");
   // select random song
   var shuffled = songs[Math.floor(Math.random() * songs.length)];
   // check to make sure song shuffled is not the song playing, if so, skip it
@@ -309,4 +312,56 @@ function shuffleSongs() {
   songAlbumArt.style.backgroundImage = shuffled.albumArt;
   // set audio source
   audioElement.src = shuffled.source;
+}
+function vibeChecker() {
+  // vibe checker (color scheme/moodboard switcher)
+  const vibeSelect = document.getElementById("vibe-selection");
+  const selected = vibeSelect.value;
+  // function to update class names so it'll apply the new color scheme to a clean body
+  function updateClass(selected) {
+    document.body.className = "";
+    document.body.classList.add(selected);
+    // function to filter through songs and return the appropriate data for each color scheme
+    let foundSong = songs.find(song => song.vibe === selected);
+    // set song data
+    songName.innerHTML = foundSong.name;
+    songArtist.innerHTML = foundSong.artist;
+    songAlbum.innerHTML = foundSong.album;
+    songLength.innerHTML = foundSong.length;
+    songAlbumArt.style.backgroundImage = foundSong.albumArt;
+    // set audio source
+    audioElement.src = foundSong.source;
+  }
+  switch (selected) {
+    case "early-riser":
+      updateClass(selected);
+      break;
+    case "sunday-afternoon":
+      updateClass(selected);
+      break;
+    case "wednesday-evening":
+      updateClass(selected);
+      break;
+    case "noon":
+      updateClass(selected);
+      break;
+    case "late-night-drive":
+      updateClass(selected);
+      break;
+    case "friday-morning":
+      updateClass(selected);
+      break;
+    case "nightclub":
+      updateClass(selected);
+      break;
+    case "dinner-with-her":
+      updateClass(selected);
+      break;
+    case "midnight":
+      updateClass(selected);
+      break;
+    default:
+      document.body.className = "";
+      document.body.classList.add("early-riser");
+  }
 }
