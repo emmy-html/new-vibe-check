@@ -220,7 +220,7 @@ let songs = [
     albumArt:
       "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-solange.png')",
     vibe: "early-riser",
-  } /*
+  },
   {
     name: "Distance",
     artist: "Yebba",
@@ -283,7 +283,7 @@ let songs = [
     source: "https://emmy-html.github.io/the-new-vibe-check/songs/headaches.mp3",
     albumArt: "url('https://emmy-html.github.io/the-new-vibe-check/img/album-art-headaches.png')",
     vibe: "dinner-with-her",
-  }, */,
+  },
   {
     name: "Touch Me",
     artist: "Victoria Monét <br> ft. Kehlani",
@@ -295,6 +295,25 @@ let songs = [
     vibe: "midnight",
   },
 ];
+function vibeDefault() {
+  const vibeSelect = document.getElementById("vibe-selection");
+  const selected = vibeSelect.value;
+  document.body.className = "";
+  document.body.classList.add(selected);
+  // function to filter through songs and return the appropriate data for each color scheme
+  let foundSong = songs.find((song) => song.vibe === selected);
+  // set song data
+  setSongData(foundSong);
+}
+function setSongData(song) {
+  songName.innerHTML = song.name;
+  songArtist.innerHTML = song.artist;
+  songAlbum.innerHTML = song.album;
+  songLength.innerHTML = song.length;
+  songAlbumArt.style.backgroundImage = song.albumArt;
+  // set audio source
+  audioElement.src = song.source;
+}
 /* vibe checker (color scheme/moodboard switcher), nested function so the color scheme switcher can be referenced from the shuffle song
    function and the dropdown selection menu   */
 function vibeChecker() {
@@ -308,13 +327,7 @@ function vibeChecker() {
       // function to filter through songs and return the appropriate data for each color scheme
       let foundSong = songs.find((song) => song.vibe === selected);
       // set song data
-      songName.innerHTML = foundSong.name;
-      songArtist.innerHTML = foundSong.artist;
-      songAlbum.innerHTML = foundSong.album;
-      songLength.innerHTML = foundSong.length;
-      songAlbumArt.style.backgroundImage = foundSong.albumArt;
-      // set audio source
-      audioElement.src = foundSong.source;
+      setSongData(foundSong);
     }
     // call the update class function on each selection
     switch (selected) {
@@ -362,14 +375,8 @@ function shuffleSongs() {
     shuffled = songs[Math.floor(Math.random() * songs.length)];
   }
   // continue
-  // set song data
-  songName.innerHTML = shuffled.name;
-  songArtist.innerHTML = shuffled.artist;
-  songAlbum.innerHTML = shuffled.album;
-  songLength.innerHTML = shuffled.length;
-  songAlbumArt.style.backgroundImage = shuffled.albumArt;
-  // set audio source
-  audioElement.src = shuffled.source;
+  // set song data & audio source
+  setSongData(shuffled);
   // update the dropdown selection on shuffle
   vibeSelect.value = shuffled.vibe;
   // run color scheme switcher

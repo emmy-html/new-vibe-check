@@ -93,17 +93,15 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
-/* color scheme:
-yellow: #F2E94E;
-blue: #A0D2DB;
-purple: #C490D1;
-light yellow: #F6F188;
-light blue: #CFE8ED;
-light purple: #E5CBEC;
-very light purple: #F2ECF3;
-*/
-/* color schemes 
-early riser */
+/* vibes // color schemes 
+- early riser
+  yellow: #F2E94E;
+  blue: #A0D2DB;
+  purple: #C490D1;
+  light yellow: #F6F188;
+  light blue: #CFE8ED;
+  light purple: #E5CBEC;
+  very light purple: #F2ECF3; */
 body.early-riser {
   background: 
   linear-gradient(130deg,
@@ -179,8 +177,44 @@ body.early-riser #vibe-check .vibe-bar:hover {
   -webkit-text-stroke: none;
   text-shadow: 2.5px -1.5px 0px black; 
 }
-/* sunday afternoon */
+/* - sunday afternoon
+ */
 body.sunday-afternoon {
+  background: red;
+}
+/* - wednesday evening
+*/
+body.wednesday-evening {
+  background: red;
+}
+/* - noon
+*/
+body.noon {
+  background: red;
+}
+/* - late night drive
+*/
+body.late-night-drive {
+  background: red;
+}
+/* - friday morning
+*/
+body.friday-morning {
+  background: red;
+}
+/* - nightclub
+*/
+body.nightclub {
+  background: red;
+}
+/* - dinner with her
+*/
+body.dinner-with-her {
+  background: red;
+}
+/* - midnight
+*/
+body.midnight {
   background: red;
 }
 /* universal styles */

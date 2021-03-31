@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   </head>
 
-  <body class="early-riser">
+  <body onload="vibeDefault()">
     <section id="moodboard">
       <article id="moodboard-img-one">
         &nbsp;
@@ -24,6 +24,7 @@
       <h1 class="project-title">Vibe Check</h1>
       <!-- change song data & color scheme based on selection -->
       <select name="vibes" id="vibe-selection" onchange="vibeChecker()">
+        <option value="midnight">Midnight</option>
         <option value="early-riser">Early Riser</option>
         <option value="sunday-afternoon">Sunday Afternoon</option>
         <option value="wednesday-evening">Wednesday Evening</option>
@@ -32,7 +33,6 @@
         <option value="friday-morning">Friday Morning</option>
         <option value="nightclub">Nightclub</option>
         <option value="dinner-with-her">Dinner With Her</option>
-        <option value="midnight">Midnight</option>
       </select>
     </header>
     <main>
