@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/color_schemes.css" />
     <meta name="theme-color" content="#fafafa" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -24,15 +25,15 @@
       <h1 class="project-title">Vibe Check</h1>
       <!-- change song data & color scheme based on selection -->
       <select name="vibes" id="vibe-selection" onchange="vibeChecker()">
-        <option value="midnight">Midnight</option>
-        <option value="early-riser">Early Riser</option>
+        <option value="early-riser" selected="selected">Early Riser</option>
         <option value="sunday-afternoon">Sunday Afternoon</option>
         <option value="wednesday-evening">Wednesday Evening</option>
         <option value="noon">Noon</option>
-        <option value="late-night-drive">Late Night Drive</option>
+        <!-- <option value="late-night-drive">Late Night Drive</option>
         <option value="friday-morning">Friday Morning</option>
-        <option value="nightclub">Nightclub</option>
+        <option value="nightclub">Nightclub</option> -->
         <option value="dinner-with-her">Dinner With Her</option>
+        <option value="midnight">Midnight</option>
       </select>
     </header>
     <main>

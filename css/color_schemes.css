@@ -1,0 +1,499 @@
+/* vibes // color schemes 
+- early riser
+  purple: #C490D1; primary
+  light purple: #E5CBEC; secondary
+  light blue: #CFE8ED; accent one
+  light yellow: #F6F188; accent two
+  blue: #A0D2DB; battery color
+  very light purple: #F2ECF3; basically white */
+  body.early-riser {
+    background: linear-gradient(
+      130deg,
+      #f6f188,
+      #e5cbec,
+      #cfe8ed,
+      #e5cbec,
+      #cfe8ed,
+      #f6f188
+    );
+  }
+  body.early-riser h1.project-title {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px black;
+  }
+  /* ipod body */
+  body.early-riser #ipod-body {
+    background: linear-gradient(to top, #c490d1, #e5cbec, #c490d1);
+  }
+  /* ipod shadow */
+  body.early-riser #ipod-body::before {
+    background: #c490d1;
+  }
+  /* window that shows song info */
+  body.early-riser .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #c490d1;
+  }
+  body.early-riser #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #c490d1;
+  }
+  body.early-riser #ipod-menu-options span.status {
+    color: #c490d1;
+  }
+  body.early-riser #ipod-menu-options span.battery {
+    color: #a0d2db;
+  }
+  body.early-riser #ipod-menu-options ul li:hover {
+    background: #c490d1;
+  }
+  body.early-riser #ipod-menu-options #active-menu-item {
+    background: #c490d1;
+  }
+  body.early-riser .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.early-riser .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #c490d1, #e5cbec);
+  }
+  body.early-riser .ipod-trackpad-content-container h3 {
+    color: #c490d1;
+  }
+  /* vibe bar */
+  body.early-riser #vibe-check h2 {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px black;
+  }
+  body.early-riser #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #cfe8ed,
+      #f6f188,
+      #e5cbec,
+      #cfe8ed,
+      #f6f188
+    );
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.early-riser #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px black;
+  }
+  /*
+  - sunday afternoon // color scheme
+    pink: #FFB5A7; primary
+    light pink: #FCD5CE; secondary
+    light blue: #CFE8ED; accent one
+    light yellow: #F9DCC4; accent two
+    blue: #FEC89A; battery color
+    very light purple: #F8EDEB; basically white */
+  body.sunday-afternoon {
+    background: linear-gradient(
+      130deg,
+      #f9dcc4,
+      #fcd5ce,
+      #cfe8ed,
+      #fcd5ce,
+      #cfe8ed,
+      #f9dcc4
+    );
+  }
+  body.sunday-afternoon h1.project-title {
+    -webkit-text-stroke: 1px #FF8870;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #FF8870;
+  }
+  /* ipod body */
+  body.sunday-afternoon #ipod-body {
+    background: linear-gradient(to top, #ffb5a7, #fcd5ce, #ffb5a7);
+  }
+  /* ipod shadow */
+  body.sunday-afternoon #ipod-body::before {
+    background: #ffb5a7;
+  }
+  /* window that shows song info */
+  body.sunday-afternoon .ipod-window-content {
+    background: #f8edeb;
+    border: 8px solid #ffb5a7;
+  }
+  body.sunday-afternoon #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #ffb5a7;
+    color: #FF8870;
+  }
+  body.sunday-afternoon #ipod-menu-options span.status {
+    color: #FF8870;
+  }
+  body.sunday-afternoon #ipod-menu-options span.battery {
+    color: #FEC89A;
+  }
+  body.sunday-afternoon #ipod-menu-options ul li:hover {
+    background: #ffb5a7;
+    color: white;
+  }
+  body.sunday-afternoon #ipod-menu-options #active-menu-item {
+    background: #ffb5a7;
+    color: white;
+  }
+  body.sunday-afternoon .ipod-trackpad-content {
+    background: #f8edeb;
+  }
+  /* inside wheel */
+  body.sunday-afternoon .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #ffb5a7, #fcd5ce);
+  }
+  body.sunday-afternoon .ipod-trackpad-content-container h3 {
+    color: #ffb5a7;
+  }
+  /* vibe bar */
+  body.sunday-afternoon #vibe-check h2 {
+    -webkit-text-stroke: 1px #FF8870;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #FF8870;
+  }
+  body.sunday-afternoon #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #cfe8ed,
+      #f9dcc4,
+      #fcd5ce,
+      #cfe8ed,
+      #f9dcc4
+    );
+    -webkit-text-stroke: 1px #FF8870;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.sunday-afternoon #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #FF8870;
+  }
+/* vibes // color schemes 
+- wednesday evening
+  brown: #A1683A; primary
+  pink: #E8998D; secondary
+  light pink: #EED2CC; accent one
+  light yellow: #F6F188; accent two
+  blue: #A0D2DB; battery color
+  very light purple: #F2ECF3; basically white */
+  body.wednesday-evening {
+    background: linear-gradient(
+      130deg,
+      #f6f188,
+      #E8998D,
+      #EED2CC,
+      #E8998D
+    );
+  }
+  body.wednesday-evening h1.project-title {
+    -webkit-text-stroke: 1px #A1683A;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #A1683A;
+  }
+  /* ipod body */
+  body.wednesday-evening #ipod-body {
+    background: linear-gradient(to top, #A1683A, #E8998D, #A1683A);
+  }
+  /* ipod shadow */
+  body.wednesday-evening #ipod-body::before {
+    background: #A1683A;
+  }
+  /* window that shows song info */
+  body.wednesday-evening .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #A1683A;
+  }
+  body.wednesday-evening #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #A1683A;
+  }
+  body.wednesday-evening #ipod-menu-options span.status {
+    color: #A1683A;
+  }
+  body.wednesday-evening #ipod-menu-options span.battery {
+    color: #E8998D;
+  }
+  body.wednesday-evening #ipod-menu-options ul li:hover {
+    background: #A1683A;
+    color: #EED2CC;
+  }
+  body.wednesday-evening #ipod-menu-options #active-menu-item {
+    background: #A1683A;
+    color: #EED2CC;
+  }
+  body.wednesday-evening .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.wednesday-evening .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #A1683A, #E8998D);
+  }
+  body.wednesday-evening .ipod-trackpad-content-container h3 {
+    color: #A1683A;
+  }
+  /* vibe bar */
+  body.wednesday-evening #vibe-check h2 {
+    -webkit-text-stroke: 1px #A1683A;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #A1683A;
+  }
+  body.wednesday-evening #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #E8998D,
+      #EED2CC,
+      #f6f188
+    );
+    -webkit-text-stroke: 1px #A1683A;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.wednesday-evening #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #A1683A;
+  }
+  /* vibes // color schemes 
+- noon
+  purple: #52489C; primary
+  teal: #59C3C3; secondary
+  dark blue: #4062BB; accent one
+  light yellow: #F6F188; accent two
+  blue: #4062BB; battery color
+  very light purple: #F2ECF3; basically white */
+  body.noon {
+    background: linear-gradient(
+      130deg,
+      #59C3C3,
+      #F6F188,
+      #4062BB,
+      #59C3C3,
+      #F6F188
+    );
+  }
+  body.noon h1.project-title {
+    -webkit-text-stroke: 1px #52489C;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #52489C;
+  }
+  /* ipod body */
+  body.noon #ipod-body {
+    background: linear-gradient(to top, #52489C, #59C3C3, #52489C);
+  }
+  /* ipod shadow */
+  body.noon #ipod-body::before {
+    background: #52489C;
+  }
+  /* window that shows song info */
+  body.noon .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #52489C;
+  }
+  body.noon #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #52489C;
+  }
+  body.noon #ipod-menu-options span.status {
+    color: #52489C;
+  }
+  body.noon #ipod-menu-options span.battery {
+    color: #4062BB;
+  }
+  body.noon #ipod-menu-options ul li:hover {
+    background: #52489C;
+  }
+  body.noon #ipod-menu-options #active-menu-item {
+    background: #52489C;
+  }
+  body.noon .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.noon .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #52489C, #59C3C3);
+  }
+  body.noon .ipod-trackpad-content-container h3 {
+    color: #52489C;
+  }
+  /* vibe bar */
+  body.noon #vibe-check h2 {
+    -webkit-text-stroke: 1px #52489C;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #52489C;
+  }
+  body.noon #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #f6f188,
+      #59C3C3,
+      #4062BB
+    );
+    -webkit-text-stroke: 1px #52489C;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.noon #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #52489C;
+  }
+  /* vibes // color schemes 
+- dinner-with-her
+  dark pink: #E4114D; primary
+  teal: #FF5376; secondary
+  soft pink: #F5A3AF; accent one
+  soft blue: #B3EEF9; accent two
+  blue: #A0D2DB; battery color
+  very light purple: #F2ECF3; basically white */
+  body.dinner-with-her {
+    background: linear-gradient(
+      130deg,
+      #FF5376,
+      #F5A3AF,
+      #B3EEF9,
+      #F5A3AF,
+      #FF5376
+    );
+  }
+  body.dinner-with-her h1.project-title {
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #E4114D;
+  }
+  /* ipod body */
+  body.dinner-with-her #ipod-body {
+    background: linear-gradient(to top, #E4114D, #FF5376, #E4114D);
+  }
+  /* ipod shadow */
+  body.dinner-with-her #ipod-body::before {
+    background: #E4114D;
+  }
+  /* window that shows song info */
+  body.dinner-with-her .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options span.status {
+    color: #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options span.battery {
+    color: #F5A3AF;
+  }
+  body.dinner-with-her #ipod-menu-options ul li:hover {
+    background: #E4114D;
+    color: #F5A3AF;
+  }
+  body.dinner-with-her #ipod-menu-options #active-menu-item {
+    background: #E4114D;
+    color: #F5A3AF;
+  }
+  body.dinner-with-her .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.dinner-with-her .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #E4114D, #FF5376);
+  }
+  body.dinner-with-her .ipod-trackpad-content-container h3 {
+    color: #E4114D;
+  }
+  /* vibe bar */
+  body.dinner-with-her #vibe-check h2 {
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #E4114D;
+  }
+  body.dinner-with-her #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #B3EEF9,
+      #F5A3AF,
+      #FF5376
+    );
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.dinner-with-her #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #E4114D;
+  }
+  /* vibes // color schemes 
+- midnight
+  wine red: #A54657; primary
+  light orange: #F1A66A; secondary
+  dark red: #582630; accent one
+  light yellow: #F6F188; accent two
+  very light purple: #F2ECF3; basically white */
+  body.midnight {
+    background: linear-gradient(
+      130deg,
+      #A54657,
+      #F1A66A,
+      #F6F188,
+      #F1A66A,
+      #A54657
+    );
+  }
+  body.midnight h1.project-title {
+    -webkit-text-stroke: 1px #A54657;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #A54657;
+  }
+  /* ipod body */
+  body.midnight #ipod-body {
+    background: linear-gradient(to top, #A54657, #F1A66A, #A54657);
+  }
+  /* ipod shadow */
+  body.midnight #ipod-body::before {
+    background: #A54657;
+  }
+  /* window that shows song info */
+  body.midnight .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #A54657;
+  }
+  body.midnight #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #A54657;
+  }
+  body.midnight #ipod-menu-options span.status {
+    color: #A54657;
+  }
+  body.midnight #ipod-menu-options span.battery {
+    color: #F1A66A;
+  }
+  body.midnight #ipod-menu-options ul li:hover {
+    background: #A54657;
+    color: white;
+  }
+  body.midnight #ipod-menu-options #active-menu-item {
+    background: #A54657;
+    color: white;
+  }
+  body.midnight .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.midnight .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #A54657, #F1A66A);
+  }
+  body.midnight .ipod-trackpad-content-container h3 {
+    color: #A54657;
+  }
+  /* vibe bar */
+  body.midnight #vibe-check h2 {
+    -webkit-text-stroke: 1px #A54657;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #A54657;
+  }
+  body.midnight #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #f6f188,
+      #F1A66A,
+      #f6f188
+    );
+    -webkit-text-stroke: 1px #A54657;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.midnight #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #A54657;
+  }

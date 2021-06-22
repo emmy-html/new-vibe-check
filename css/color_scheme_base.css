@@ -1,0 +1,81 @@
+/* vibes // color schemes 
+- dinner-with-her
+  dark pink: #E4114D; primary
+  teal: #FF5376; secondary
+  soft pink: #F5A3AF; accent one
+  light yellow: #F6F188; accent two
+  blue: #A0D2DB; battery color
+  very light purple: #F2ECF3; basically white */
+  body.dinner-with-her {
+    background: linear-gradient(
+      130deg,
+      #FF5376,
+      #F5A3AF,
+      #FF5376,
+    );
+  }
+  body.dinner-with-her h1.project-title {
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2.5px -1.5px 0px #E4114D;
+  }
+  /* ipod body */
+  body.dinner-with-her #ipod-body {
+    background: linear-gradient(to top, #E4114D, #FF5376, #E4114D);
+  }
+  /* ipod shadow */
+  body.dinner-with-her #ipod-body::before {
+    background: #E4114D;
+  }
+  /* window that shows song info */
+  body.dinner-with-her .ipod-window-content {
+    background: #f2ecf3;
+    border: 8px solid #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options {
+    box-shadow: 5px 0px 20px -2px #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options span.status {
+    color: #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options span.battery {
+    color: #a0d2db;
+  }
+  body.dinner-with-her #ipod-menu-options ul li:hover {
+    background: #E4114D;
+  }
+  body.dinner-with-her #ipod-menu-options #active-menu-item {
+    background: #E4114D;
+  }
+  body.dinner-with-her .ipod-trackpad-content {
+    background: #f2ecf3;
+  }
+  /* inside wheel */
+  body.dinner-with-her .ipod-trackpad-content::before {
+    background: linear-gradient(to bottom, #E4114D, #FF5376);
+  }
+  body.dinner-with-her .ipod-trackpad-content-container h3 {
+    color: #E4114D;
+  }
+  /* vibe bar */
+  body.dinner-with-her #vibe-check h2 {
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 1.5px 0px #E4114D;
+  }
+  body.dinner-with-her #vibe-check .vibe-bar {
+    background: repeating-linear-gradient(
+      45deg,
+      #F5A3AF,
+      #f6f188,
+      #FF5376,
+      #F5A3AF,
+      #f6f188
+    );
+    -webkit-text-stroke: 1px #E4114D;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  body.dinner-with-her #vibe-check .vibe-bar:hover {
+    -webkit-text-stroke: none;
+    text-shadow: 2.5px -1.5px 0px #E4114D;
+  }
