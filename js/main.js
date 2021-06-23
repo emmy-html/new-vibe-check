@@ -2,14 +2,15 @@
 function checkWidth() {
   const w = window.innerWidth;
   if (w < 768) {
+    document.body.style.visibility = "hidden";
     alert(
       "Please view on a screen size that is at least 768px wide! Thank you!"
     );
   } else {
-    console.log("Success!");
+    document.body.style.visibility = "visible";
   }
-  body.innerHTML = "Error";
 }
+setInterval(checkWidth, 2000);
 // get time & date and display them in the top bar of the ePod
 function updateTime() {
   // declare variables for am/pm & the symbols that go with them
